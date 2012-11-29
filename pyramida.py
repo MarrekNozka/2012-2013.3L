@@ -7,13 +7,22 @@
 # Úloha:   tiskne pyramidu ze znaků
 ############################################################################
 
+import random
+############################################################################
 pRadku = input('zadej počet řádků > ')
 
 pMezer = pRadku - 1
 pZnaku = 1
 
-for i in range( pRadku ) :
-    print pMezer*' ' + pZnaku*'*'
+# znaky z kterých bude pyramida
+znaky = tuple(u'@#$%^&*+μω')
+
+for _ in range( pRadku ) :
+    # nahodne číslo v rozsahu indexů proměnné 'znaky'
+    nahoda = random.randint(0,len(znaky)-1)
+    # nahodny znak
+    znak = znaky[ nahoda ]
+    print pMezer*' ' + pZnaku*znak
     pZnaku += 2
     pMezer -= 1
 
