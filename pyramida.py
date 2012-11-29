@@ -12,9 +12,7 @@ pRadku = input('zadej počet řádků > ')
 pMezer = pRadku - 1
 pZnaku = 1
 
-i=0
-while i<pRadku :
-    i = i+1
+for i in range( pRadku ) :
     print pMezer*' ' + pZnaku*'*'
     pZnaku += 2
     pMezer -= 1
