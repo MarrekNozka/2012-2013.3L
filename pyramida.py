@@ -15,14 +15,19 @@ pMezer = pRadku - 1
 pZnaku = 1
 
 # znaky z kterých bude pyramida
-znaky = tuple(u'@#$%^&*+μω')
+znaky = tuple(u'@#$%^&*+μωχκΧνε!\\/?><,.')
 
-for _ in range( pRadku ) :
-    # nahodne číslo v rozsahu indexů proměnné 'znaky'
-    nahoda = random.randint(0,len(znaky)-1)
-    # nahodny znak
-    znak = znaky[ nahoda ]
-    print pMezer*' ' + pZnaku*znak
+for i in range( pRadku ) :
+    radek = ''
+    for j in range( pZnaku ):
+        #radek += znaky[ random.randint(0, len(znaky) -1 ) ]
+        # nahodne číslo v rozsahu indexů proměnné 'znaky'
+        nahoda = random.randint(0,len(znaky)-1)
+        # nahodny znak
+        znak = znaky[ nahoda ]
+        # přidám do řádku náhodný znak
+        radek = radek + znak
+    print pMezer*' ' + radek
     pZnaku += 2
     pMezer -= 1
 
