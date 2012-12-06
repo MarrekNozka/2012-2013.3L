@@ -8,20 +8,21 @@
 #          http://cs.wikipedia.org/wiki/Fibonacciho_posloupnost
 ############################################################################
 
-mIndex = input("zadej maximální index > ")
+def Fib(n):
+    if n == 0:
+        print 0
+    elif n == 1:
+        print 0,1
+    else: 
+        print 0,1,
+        (F_2, F_1 ) =( 0, 1 )
+        i = 2 
+        while i<=n :
+            i +=  1
+            Fn= F_2 + F_1
+            print Fn,
+            ( F_2 , F_1 ) = ( F_1, Fn )
 
-if mIndex<0:
-    print "Chyba: číslo nesmí být záporné"
-elif mIndex == 0:
-    print 0
-elif mIndex == 1:
-    print 0,1
-else: 
-    print 0,1,
-    (F_2, F_1 ) =( 0, 1 )
-    i = 2 
-    while i<=mIndex :
-        i +=  1
-        Fn= F_2 + F_1
-        print Fn,
-        ( F_2 , F_1 ) = ( F_1, Fn )
+############################################################################
+mIndex = input("zadej maximální index > ")
+Fib(mIndex)
