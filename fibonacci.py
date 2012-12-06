@@ -18,12 +18,10 @@ elif mIndex == 1:
     print 0,1
 else: 
     print 0,1,
-    F_2 = 0
-    F_1 = 1
+    (F_2, F_1 ) =( 0, 1 )
     i = 2 
     while i<=mIndex :
-        i=i + 1
+        i +=  1
         Fn= F_2 + F_1
         print Fn,
-        F_2 = F_1
-        F_1 = Fn
+        ( F_2 , F_1 ) = ( F_1, Fn )
