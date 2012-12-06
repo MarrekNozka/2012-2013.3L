@@ -10,19 +10,29 @@
 
 def Fib(n):
     if n == 0:
-        print 0
+        return 0
     elif n == 1:
-        print 0,1
+        return 1
     else: 
-        print 0,1,
         (F_2, F_1 ) =( 0, 1 )
         i = 2 
         while i<=n :
             i +=  1
             Fn= F_2 + F_1
-            print Fn,
             ( F_2 , F_1 ) = ( F_1, Fn )
+        return Fn
+
+# rekurzivní definice
+def FibR(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else: 
+        return FibR(n-2) + FibR(n-1)
 
 ############################################################################
 mIndex = input("zadej maximální index > ")
-Fib(mIndex)
+
+print Fib(mIndex)
+print FibR(mIndex)
