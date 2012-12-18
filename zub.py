@@ -46,6 +46,6 @@ t.up()
 t.goto(-300,0)
 t.down()
 
-zub(200,6)
+zub(200,5)
 
 t.exitonclick()
