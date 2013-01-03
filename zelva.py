@@ -24,12 +24,21 @@ def ctverec(kroky=100):
     t.left(90)
     t.forward(kroky)
 
-
 # kytka
 def kvetCtverec(strana=100, pocet=9):
     for _ in range(pocet):
         ctverec(strana)
         t.left(360./pocet)
+
+# n-úhelník
+def nUhelnik(strana=100, n=6, barva="#000000"):
+    aktual = t.pencolor()
+    t.pencolor(barva)
+    uhel = 360./n
+    for _ in range(n):
+        t.forward(strana)
+        t.right(uhel)
+    t.pencolor(aktual)
 
 def presun(x,y):
     t.up()
@@ -38,7 +47,9 @@ def presun(x,y):
 
 ###########################################################################
 
-kvetCtverec()
+nUhelnik(n=9,barva='#12ea45')
+
+kvetCtverec(pocet=5,strana=288)
 
 presun(-200,-200)
 t.pencolor('#c18fab')
