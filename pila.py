@@ -25,23 +25,25 @@ from pylab import pi
 ############################################################################
 
 
-x = lab.linspace(0,10,100)
-y = lab.zeros(100) 
+t = lab.linspace(0,10,100)
+u = lab.zeros(100) 
 
-H=0
-D=0.1
-i=0
-while i<len(y):
-    while H<2 and i<len(y):
-        y[i] = H
-        i += 1
-        H += D
-    while H>0 and i<len(y):
-        y[i] = H
-        i += 1
-        H -= D
+hodnota=0
+prirustek=0.1
+j=0 # index vzorku
 
-lab.plot(x,y)
+while j<len(u):
+    while hodnota<2 and j<len(u):
+        u[j] = hodnota
+        j+=1
+        hodnota += prirustek
+    while hodnota>0 and j<len(u):
+        u[j] = hodnota
+        j+=1
+        hodnota -= prirustek
+
+
+lab.plot(t,u)
 lab.grid()
 
 lab.show()
