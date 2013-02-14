@@ -13,8 +13,9 @@ from pylab import pi
 # zeptám se na jméno souboru
 #otevře soubor
 try:
-    soubor=raw_input('zadej vstupní soubor: ')
-    f=open(soubor, 'r')
+#    soubor=raw_input('zadej vstupní soubor: ')
+#    f=open(soubor, 'r')
+    f=open('graf.txt', 'r')
 except IOError:
     print "soubor se nepodařilo otevřít"
     exit(1)
