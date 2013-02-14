@@ -37,8 +37,8 @@ for i in range( len(x) ):
 
 #### výpočet hladké křivky
 # vytvořím novou osu x
-newX = lab.linspace(min(x), max(x),300)
 from scipy.interpolate import spline
+newX = lab.linspace(min(x), max(x),300)
 newY = spline(x,y,newX)
 
 lab.plot(x,y,'rx')
