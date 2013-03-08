@@ -32,19 +32,19 @@ print '\n',x
 
 cisla =[-129, 598, 496, 568, 59, -125, 48312, 5893, 12, 34569, 4521]
 
-#for c in cisla:
-#    prac = abs(c)
-#    retezec = str(prac)
-#    i=0
-#    Tisk = False
-#    while i<len(retezec)-1:
-#        if int(retezec[i]) < int(retezec[i+1]):
+for c in cisla:
+    prac = abs(c)
+    retezec = str(prac)
+    i=0
+    Tisk = False
+    while i<len(retezec)-1:
+        if int(retezec[i]) < int(retezec[i+1]):
 
-#        else:
-#            break
-#        
-#        i+=1
-#    if Tisk :
-#        print c
+        else:
+            break
+        
+        i+=1
+    if Tisk :
+        print c
 
 
